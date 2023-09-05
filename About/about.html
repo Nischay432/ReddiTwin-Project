@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About</title>
+    <style>
+        .about-div{
+            width: 50%;
+            left: 25%;
+            position: absolute;
+            top: 30%;
+            justify-content: center;
+            align-items: center;
+        }
+        .image1{
+            width: 100%;
+        }
+        .heading{
+            left: 40%;
+            color: #FF4500;
+            font-family: cursive;
+        }
+        .text{
+            color: #FF4500;
+            font-size:23px ;
+            font-family: cursive;
+        }
+        .list{
+            list-style-type: none;
+            display:flex;
+            margin: 5px;
+        }
+        .navbar{
+            background-color: #FF4500;
+            
+        }
+        .list a{
+            padding: 20px;
+            color: white;
+            font-size: 20px;
+            text-decoration: none;
+        }
+        .reddit-logo{
+            margin-top: 8px;
+            width: 45px;
+            height: 45px;
+        }
+        
+        .list a:hover{
+            color: black;
+        }
+        #header{
+            display: -ms-grid;
+            display: grid;
+            -ms-grid-columns: 111px auto 1fr;
+            grid-template-columns: 111px auto 1fr;
+            background: #ff4500;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 9;
+        }
+        .wrapper{
+            position: relative;
+            overflow: hidden;
+            width: 100%;
+        }
+        body{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .list h1{
+            color: white;
+            font-family: "RedditSans", Arial, "Helvetica Neue", Helvetica, sans-serif;
+        }
+        #about{
+            color: black;
+        }
+        
+    </style>
+    
+</head>
+<body>
+    
+    <div class="wrapper">
+    <header id="header">
+    <nav class="navbar">
+        <ul class="list">
+        <img src="/Resources/logo3.png" alt="logo" class="reddit-logo"><h1> ReddiTwin </h1>
+        <a href="about.html" id="about">About</a>
+        <a href="careers.html">Carrers</a>
+        <a href="press.html">Press</a>
+        <a href="brand.html">Brand</a>
+        <a href="">Transparency</a>
+        <a href="">Blog</a>
+    </ul>
+    </nav>
+</header>
+    <img src="low-poly-white-background-design_1017-33204.avif" alt="background-image" class="image1">
+    <div class="about-div">
+        <h1 class="heading">Dive Into Anything</h1>
+        <p class="text">
+            Reddit is home to thousands of communities, endless conversation, and authentic human connection. 
+            Whether you're into breaking news, sports, TV fan theories, or a never-ending stream of the internet's 
+            cutest animals, there's a community on Reddit for you.
+        </p>
+    </div>
+</div>
+</body>
+</html>

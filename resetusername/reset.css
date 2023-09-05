@@ -1,0 +1,116 @@
+body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: rgb(50, 44, 44);
+    margin: 0;
+    padding: 0;
+}
+
+/* Common styles for elements */
+.Reddit {
+    margin:5px;
+    position: absolute;
+    padding: 20px;
+    width: 95%;
+    max-width: 300px;
+    height: 500px;
+    background: white;
+    box-shadow: 5px 20px 25px black;
+    border-radius: 10px;
+    justify-content: center;
+    align-items: center;
+}
+
+.pop {
+    font-weight: 100;
+    margin-top: 80px;
+    font-size:large;
+    margin-bottom: 10px;
+}
+
+.top,
+h.tat
+{
+    font-size: 0.9rem;
+    margin-bottom: 6px;
+}
+a.tat{
+    font-size: 0.9rem;
+    margin-bottom: 3px;
+}
+
+.continue {
+   
+    border: 0.5px solid;
+    outline: none;
+    padding: 5px;
+    border-radius: 25px;
+    margin: 5px;
+    width: 90%;
+    height: 30px;
+    margin-top: 6px;
+    
+}
+
+.pl::placeholder {
+    top: 10%;
+    position: absolute;
+    transition: 0.4s;
+    transition-duration: 1s;
+    transform: translateX(0px) translateY(-2px);
+    font-size: 0.7em;
+    color: black;
+    padding-left: 10px;
+}
+
+#cable {
+    text-align: center;
+    padding: 9px 116px;
+    border-radius: 25px;
+    margin: 5px;
+    border: 1px slategrey solid;
+    font-size: small;
+    background-color: #F45000;
+    color: white;
+    font-family: sans-serif;
+    margin-bottom: 10px;
+}
+
+/* Responsive styles using media queries */
+@media (max-width: 320px) and (max-height: 500px) {
+    .Reddit {
+        padding: 8px;
+        margin-top: 50px;
+        font-size: x-small;
+    }
+
+    .pop {
+        margin-top: 40px;
+        font-size: xx-small;
+    }
+
+    .continue {
+        padding-top: 3px;
+        padding-left: 8px;
+    }
+
+    #cable {
+        padding: 6px 50px;
+    }
+
+    h.tat,
+    a.tat {
+        font-size: xx-small;
+        margin-bottom: 5px;
+    }
+}
+
+
+
+
+
+
+

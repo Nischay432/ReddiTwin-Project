@@ -1,0 +1,194 @@
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: black;
+    font-family: Verdana, Geneva, Tahoma, sans-serif ;
+
+}
+.Reddit{
+    font-size: 0.9rem;
+    margin: 5px;
+    position: fixed;
+    padding: 20px 30px;
+    width: 350px;
+    height: 500px;
+    background: white;
+    box-shadow: 5px 8px 10px ;
+    border-radius: 10px;
+   
+
+}
+.switch{
+    margin: 5px;
+    text-align: center;
+    padding: 10px 90px;
+    border-radius: 25px;
+    margin: 5px;
+    border: 1px  slategrey solid;
+    font-size: medium;
+}
+.google {
+    display: flex;
+    direction: column;
+    text-align: center;
+    padding: 10px 16px;
+    border-radius: 25px;
+    height: 20px;
+    margin: 5px;
+    border: 1px  slategrey solid;
+    font-size: medium;
+    font-family: sans-serif;
+    margin-bottom: 0px;
+    align-items: center;
+    background-color:whitesmoke;
+}
+.google1 {
+    display: flex;
+    direction: column;
+    text-align: center;
+    padding: 10px 16px;
+    border-radius: 25px;
+    height: 20px;
+    margin: 5px;
+    border: 1px  slategrey solid;
+    font-size: medium;
+    font-family: sans-serif;
+    margin-top: 0px;
+    align-items: center;
+    background-color:whitesmoke;
+}
+.google p {
+    margin-left: 40px;
+    text-decoration: none;
+    color: black;
+}
+.google1 p {
+    margin-left: 40px;
+    text-decoration: none;
+    color: black;
+}
+#red {
+    margin-left: 46px;
+    text-decoration: none;
+    color: black;
+    
+}
+div a{
+    text-decoration: none
+    
+}
+.google-apple img{
+    height: 40px;
+    width: 40px;
+}
+#red1{
+    height: 28px;
+    width: 28px;
+    padding: 0px 7px;
+}
+.wall{
+    text-decoration: none;
+    color: #F45000;
+}
+h1{  
+ font-weight: 100;
+}
+h3{
+    margin-top: 2px;
+    margin:15px 145px;
+    font-weight: 100;
+    font-size: medium;
+    
+}
+
+.user{
+    border: none;
+    padding: 5px 20px;
+    border-radius: 25px;
+    margin: 10px;
+    border: 1px slategrey;
+    
+}
+.continue{
+   border: none;
+    outline: none;
+    padding: 15px 10px;
+    padding-top: 25px;
+    padding-left: 15px;
+    border-radius: 25px;
+    margin: 5px;
+    width:87%;  
+}
+#msg {
+    font-size: 13px;
+    width: 130px;
+    color: #F45000;
+    position: relative;
+    transform: translateX(100px) translateY(-10px);
+    z-index: 3;
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    display: none;
+}
+.pl::placeholder{
+    top:12%;
+    position: absolute;
+    transition: 0.4s;
+    transition-duration: 1s;
+    transform: translateX(0px) translateY(-2px);
+    font-size: 0.8em; 
+    color: black;
+}
+#cable{
+    text-align: center;
+    padding: 10px 140px;
+    border-radius: 25px;
+    margin: 5px;
+    border: 1px  slategrey solid;
+    font-size: medium;
+    background-color:rgb(218, 30, 30);
+    color: white;
+    font-family: sans-serif;
+}
+h5{
+     margin-top:27px;
+     margin-bottom: 10px;
+     font-weight: 100;
+}
+.pro{
+    margin-top: 10px;
+}
+/* Media Query for Mobile Devices */
+@media (max-width: 480px) {
+    .Reddit {
+        width: 300px;
+       
+    }
+    .switch{
+        padding: 10px;
+        width: 90%;
+    }
+    #data{
+        padding: 10px;
+        width: 90%;
+    }
+    #cable {
+        padding: 10px 50px;
+        width: 90%;
+    }
+    input.continue {
+        padding: 10px;
+        width: 83%;
+    }
+    h3 {
+        margin: 10px 105px;
+    }
+    h5 {
+        margin-top: 5px;
+        margin-bottom: 15px;
+    }
+}

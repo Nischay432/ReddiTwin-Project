@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="signup.css">
+</head>
+<body>
+    <div class="Reddit">
+        <h1>Sign Up</h1>
+        <p style="font-weight: 100;">
+         By continuing, you are setting up a ReddiTwin account and agree to our <a class="wall" href="useraggrement.html">User Agreement</a> and <a class="wall" href="Privacy.html">Privacy Policy</a> .
+        </p>
+        <form name="submit-to-google-sheet">
+            <div class="google-apple">
+               <a href="https://accounts.google.com/">
+                <div class="google">
+                    <img src="images/google-.png" alt="Google image">
+                    <p>Continue with Google</p>
+                </div>
+                </br>
+                <a href="https://appleid.apple.com">
+                  <div class="google1">
+                    <img id="red1" src="images/apple.png" alt="Google image">
+                    <p>Continue with Apple</p>
+                  </div>
+                </a>
+            </div>
+        </br>
+        <h3>OR</h3>
+        </br>
+        <label class="pro" for="Email" ></label>
+        <input class="continue" type="email" name="email" id="email" placeholder="Email" required="required" onfocus="up()" onblur="down()">
+    </br>
+
+    </br>
+        <button id="cable"  value="Continue">Sign up</button>
+        <p id="msg" >Sign up Successful</p>
+        <h5><b>Already at Redditwin</b> <a href="/login/login.html"><b>Log In</b></a></h5>
+    </form>
+    </div>
+    <script>
+         function up(){
+        const ty=document.getElementById("email");
+        ty.classList.add("pl");
+    }
+    function down(){
+        const ty=document.getElementById("email");
+        ty.classList.add("pl");
+    }
+
+    </script>
+      <!-- JavaScript for Form Submission -->
+      <script>
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbwdV-IZGvlmtnAspiStZim32hziqeGfP30OAdFj_z3YFZsNHDZfzNUo4qFqE8_jgY84rw/exec';
+        const form = document.forms['submit-to-google-sheet'];
+
+form.addEventListener('submit', e => {
+e.preventDefault();
+const msg = document.getElementById('msg'); // Get the msg element
+
+// Your existing code for form submission
+fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+        .then(response => {
+            // Display success message
+            msg.style.display = "block"; // Set display to "block"
+
+            // Reset message and form after a delay
+            setTimeout(function() {
+                msg.style.display = "none"; // Set display back to "none"
+                form.reset();
+            }, 1000);
+        })
+        .catch(error => console.error('Error!', error.message))
+});
+</script>
+    
+</body>
+</html>

@@ -1,0 +1,707 @@
+/* Import Google Fonts for styling */
+@import url('https://fonts.googleapis.com/css?family=Raleway:400,700,900');
+
+/* Global Styles */
+html {
+    scroll-behavior: smooth;
+}
+body {
+    margin: 0;
+    font-family: verdana, arial, helvetica, sans-serif;
+    background-color: #1a282d;
+    color: white;
+}
+
+/* Styles for the main header section */
+.main-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 40px;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #1A282D;
+    padding: 1rem;
+    border-bottom: 0.5px solid #555;
+}
+
+/* Styles for the logo section */
+.logo {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    height: 50px;
+    filter: invert(100%)
+}
+
+/* Styles for the main heading in the header */
+.main-header .mainheading {
+    margin-left: 10px;
+    font-family: verdana, arial, helvetica, sans-serif; 
+}
+
+/* Styles for headings */
+.heading {
+    color: #82859B;
+    height: 40px;
+    padding: 4%;
+    border-top: 1px solid #555;
+}
+
+/* Styles for posts added through the modal */
+.popup {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.popup-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #333;
+    height: 60vh;
+    width: 60%;
+    max-width: 600px;
+    padding: 10px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.close-popup {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    cursor: pointer;
+    transition: color 0.3s ease-in-out;
+    font-size: 20px;
+    cursor: pointer;
+    color: white;
+}
+.popup-content input[type="text"]{
+    display: block;
+    width: 80%;
+    max-width: 80%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #777;
+    border-radius: 5px;
+    background-color: #222;
+    color: white;
+}
+.popup-content textarea{
+    display: block;
+    width: 80%;
+    max-width: 80%;
+    height: 40%;
+    max-height: 60px; 
+    overflow-y: scroll;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #777;
+    border-radius: 5px;
+    background-color: #222;
+    color: white;
+}
+
+.close-popup:hover {
+    color: #f00;
+}
+
+  
+#blog-posts .post{
+    background-color: #4d4d4d;
+    border-radius: 15px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    margin: 10px;
+}
+.post .post-image {
+    margin-bottom: 10px;
+}
+
+.post .post-image img {
+    border-radius: 10px;
+}
+.edit-button,
+.delete-button {
+    background-color: #f2f2f2;
+    border: none;
+    padding: 5px;
+    cursor: pointer;
+    top: 5px;
+    right: 5px;
+    display: inline;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    width: 24px;
+    height: 24px;
+    transition: background-color 0.3s ease;
+    z-index: 500;
+}
+
+.edit-button:hover,
+.delete-button:hover {
+    background-color: #d9d9d9;
+}
+
+.edit-button::before {
+    content: "\f044"; 
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+}
+
+.delete-button::before {
+    content: "\f1f8"; 
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+}
+
+
+.popup-content h2 {
+    color: white;
+}
+
+.popup-content button {
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    color: white;
+}
+
+#create-post-button {
+    background-color: #FF4500;
+}
+
+#cancel-post-button {
+    background-color: #777;
+    margin-left: 10px;
+}
+
+/* Styles for the search bar */
+.search__container {
+    display: inline;
+}
+
+.search__title {
+    font-size: 22px;
+    font-weight: 900;
+    text-align: center;
+    color: #ff8b88;
+}
+
+/* Input Styles for Search Bar */
+.search__input {
+    width: 100%;
+    padding: 12px 24px;
+    background-color: transparent;
+    transition: transform 250ms ease-in-out;
+    font-size: 14px;
+    line-height: 18px;
+    color: #575756;
+    background-color: transparent;
+    background: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHg9IjBweCIgeT0iMHB4IiB3aWR0aD0iNTAiIGhlaWdodD0iNTAiIHZpZXdCb3g9IjAsMCwyNTYsMjU2IgpzdHlsZT0iZmlsbDojMDAwMDAwOyI+CjxnIGZpbGw9IiNmZmZmZmYiIGZpbGwtcnVsZT0ibm9uemVybyIgc3Ryb2tlPSJub25lIiBzdHJva2Utd2lkdGg9IjEiIHN0cm9rZS1saW5lY2FwPSJidXR0IiBzdHJva2UtbGluZWpvaW49Im1pdGVyIiBzdHJva2UtbWl0ZXJsaW1pdD0iMTAiIHN0cm9rZS1kYXNoYXJyYXk9IiIgc3Ryb2tlLWRhc2hvZmZzZXQ9IjAiIGZvbnQtZmFtaWx5PSJub25lIiBmb250LXdlaWdodD0ibm9uZSIgZm9udC1zaXplPSJub25lIiB0ZXh0LWFuY2hvcj0ibm9uZSIgc3R5bGU9Im1peC1ibGVuZC1tb2RlOiBub3JtYWwiPjxnIHRyYW5zZm9ybT0ic2NhbGUoNS4xMiw1LjEyKSI+PHBhdGggZD0iTTIxLDNjLTkuMzk4NDQsMCAtMTcsNy42MDE1NiAtMTcsMTdjMCw5LjM5ODQ0IDcuNjAxNTYsMTcgMTcsMTdjMy4zNTU0NywwIDYuNDYwOTQsLTAuOTg0MzcgOS4wOTM3NSwtMi42NTYyNWwxMi4yODEyNSwxMi4yODEyNWw0LjI1LC00LjI1bC0xMi4xMjUsLTEyLjA5Mzc1YzIuMTc5NjksLTIuODU5MzcgMy41LC02LjQwMjM0IDMuNSwtMTAuMjgxMjVjMCwtOS4zOTg0NCAtNy42MDE1NiwtMTcgLTE3LC0xN3pNMjEsN2M3LjE5OTIyLDAgMTMsNS44MDA3OCAxMywxM2MwLDcuMTk5MjIgLTUuODAwNzgsMTMgLTEzLDEzYy03LjE5OTIyLDAgLTEzLC01LjgwMDc4IC0xMywtMTNjMCwtNy4xOTkyMiA1LjgwMDc4LC0xMyAxMywtMTN6Ij48L3BhdGg+PC9nPjwvZz4KPC9zdmc+') 50% 50% no-repeat;
+    background-repeat: no-repeat;
+    background-size: 18px 18px;
+    background-position: 95% center;
+    border-radius: 50px;
+    border: 1px solid #575756;
+    transition: all 250ms ease-in-out;
+    backface-visibility: hidden;
+    transform-style: preserve-3d;
+}
+
+/* Placeholder Styles for Search Bar */
+.search__input::placeholder {
+    color: 00FFFFFF;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+}
+
+/* Search Input Focus Styles */
+.search__input:focus {
+    outline: 0;
+    border: 1px solid transparent;
+    border-bottom: 1px solid whitesmoke;
+    border-radius: 0;
+}
+
+/* User Section Styles */
+.user-section{
+    display: inline;
+    margin-right: 5%;
+}
+.user-section a{
+    text-decoration: none;
+    color: white;
+}
+.user-section button{
+    align-items: center;
+    text-decoration: none;
+    background-color: #FF5700;
+    border: none;
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease-in-out;
+}
+/* Styling for the add-post-button */
+#add-post-button {
+    margin-right: 10px;
+    overflow: hidden;
+    font-weight: 700;
+    cursor: pointer;
+    
+}
+#Login-button:hover {
+    background-color: #E63900;
+}
+#add-post-button:hover {
+    background-color: #E63900;
+}
+
+/* Styles for the main content container */
+.container {
+    display: flex;
+    flex-direction: row;
+    margin-top: calc(2rem + 60px);
+    clear: both;
+    padding-bottom: 2rem;
+}
+
+/* Styles for the left menu */
+.menu {
+    position: fixed;
+    margin-left: 4%;
+    width: 250px;
+    height: calc(100vh - 100px);
+    overflow-y: scroll;
+    scrollbar-width: thin;
+    scrollbar-color: #1a282d;
+}
+
+/* Scrollbar Styles for Left Menu */
+.menu::-webkit-scrollbar {
+    width: 5px;
+}
+
+.menu::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+.menu::-webkit-scrollbar-thumb {
+    background-color: #555;
+    border-radius: 10px;
+}
+
+/* Menu List Styles */
+.menu-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* Menu List Item Styles */
+.menu-list li img {
+    width: 30px;
+    height: 30px; 
+    filter: invert(100%);
+    margin-right: 5px;
+}
+
+.menu-list li {
+    display: flex;
+    align-items: center;
+    margin: 4%;
+}
+
+/* Menu List Link Styles */
+.menu-list a {
+    display: inline;
+    padding: 0.5rem 1rem;
+    color: whitesmoke;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+    flex: 1;
+}
+
+/* Menu List Link Hover Styles */
+.menu-list a:hover {
+    background-color: rgba(255, 255, 255, 0.05);
+}
+
+/* Styles for the communities section */
+.communities {
+    margin-top: 50px;
+    max-height: 350px;
+    width: 300px;
+    background-color: #222;
+    border-radius: 10px;
+    overflow: hidden;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    clear: both;
+  
+}
+
+/* Styles for the heading of communities section */
+.communities-heading {
+    color: white;
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+}
+
+/* Styles for individual communities */
+.community {
+    display: flex;
+    align-items: center;
+    margin-bottom: 0.5rem;
+    color: white;
+    text-decoration: none;
+    flex: 1;
+}
+.community:hover {
+    background-color: rgba(255, 255, 255, 0.05);
+}
+
+/* Styles for community logos */
+.community img {
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+}
+
+/* Styles for community information */
+.community-info {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Community Title Styles */
+.community-info h3 {
+    color: white;
+    font-size: 1rem;
+    margin: 0;
+    margin-bottom: 0.3rem;
+}
+
+/* Community Description Styles */
+.community-info p {
+    color: #999;
+    font-size: 0.8rem;
+    margin: 0;
+}
+
+/* Styles for premium subscription section */
+.premium-div {
+    background-color: #F5F5ED;
+    width: 300px;
+    color: black;
+    margin-top: 20px;
+    margin-right: 20px;
+    max-height: 350px;
+    border-radius: 10px;
+    padding: 1rem;
+    margin-bottom: 1rem;
+
+}
+.premium-head{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+/* Community Title Styles */
+.premium-head h3 {
+    color: black;
+    font-size: 1rem;
+    margin: 0;
+    margin-bottom: 0.3rem;
+}
+
+/* Community Description Styles */
+.premium-head p {
+    color: #101010;
+    font-size: 0.8rem;
+    margin: 0;
+}
+
+/* Premium Button Styles */
+.premium-button {
+    background-color: #FF4500;
+    color: #FFFFFF;
+    border: none;
+    width: 100%;
+    border-radius: 40px;
+    padding: 5px 10px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+/* Premium Icon Image Styles */
+.premium-button a {
+    text-decoration: none;
+    color: white;
+}
+.premium-div img {
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+    position: relative;
+    left: 0;
+    top: 50%;
+    transform: translateY(+100%);
+
+}
+
+/* Styles for the content section */
+.content.with-menu-margin {
+    margin-left: 300px; 
+}
+
+.content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow-y: scroll;
+    height: 100%;
+    padding: 1rem;
+}
+
+/* Scrollbar Styles for Content Section */
+.content::-webkit-scrollbar {
+    width: 5px;
+}
+
+.content::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+.content::-webkit-scrollbar-thumb {
+    background-color: #555;
+    border-radius: 10px;
+}
+
+/* Styles for Reddit-style posts */
+.reddit-post {
+    background-color: #4d4d4d;
+    border-radius: 15px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    margin: 10px;
+}
+.reddit-post:hover {
+    background-color: rgb(242,242,242,0.3);
+}
+
+/* Styles for author icons */
+.author-icon img{
+    display: inline;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+}
+
+/* Styles for post authors */
+.post-author{
+    display: inline;
+    padding: 0.5rem 0.5rem;
+}
+
+/* Styles for post headers */
+.post-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: whitesmoke;
+    font-size: 0.8rem;
+    margin-bottom: 10px;
+}
+
+/* Styles for post descriptions */
+.post-description {
+    font-size: 1.2rem;
+    margin: 10px 0;
+}
+
+/* Styles for post images */
+.post-image {
+    margin-bottom: 10px;
+}
+
+/* Post Image Content Styles */
+.post-image img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+/* Styles for post action buttons */
+.post-buttons {
+    display: flex;
+}
+
+/* Styles for rounded buttons */
+.rounded-button {
+    margin-right: 2px;
+    padding: 6px 12px;
+    background-color: white;
+    color: black;
+    border: 2px solid #4CAF50;
+    border-radius: 7px;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+}
+
+.rounded-button:hover {
+    background-color: #4CAF50;
+    color: white;
+}
+.right-side {
+    margin-right: 3%;
+}
+.fake {
+    width:300px;
+}
+.fix-right {
+    position: fixed;
+    clear: both;
+}
+
+/* Responsive styles for screens up to 900px width */
+@media (max-width: 900px) {
+    .main-header {
+        padding: 0.5rem;
+    }
+    .logo img {
+        height: 40px;
+    }
+    .main-header .mainheading {
+        display: none;
+    }
+    .search__container{
+        width: 30%;
+    }
+    .user-section{
+        margin-right: 5%;
+    }
+    .menu {
+        margin-left: 0px;
+        background-color: #1a282d;
+        display: none;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        background-color: #333;
+        z-index: 999;;
+        text-align: center;
+        padding: 2rem 0;
+    }
+    .menu-list li {
+        margin-left: 10%;
+    }
+    .menu-icon {
+        display: block;
+    }
+    #menu-toggle:not(:checked) + .menu {
+        display: none;
+    }
+    .content {
+        left: 0;
+    }
+    .communities {
+        order: 2;
+        width: 90%;
+        margin-top: 1rem;
+    }
+    .container {
+        flex-direction: column;
+        align-items: center;
+    }
+    .premium-div {
+        width: 90%;
+        position: static;
+    }
+    .fix-right {
+        position: static;
+    }
+}
+
+/* Responsive Adjustments for Mobile Devices */
+@media (max-width: 480px) {
+    .main-header {
+        padding: 0.5rem;
+    }
+    .logo img {
+        height: 40px;
+    }
+    .main-header .mainheading {
+        display: none;
+    }
+    .search__container{
+        width: 20%;
+        margin-right: 10px;    }
+    #add-post-button {
+        margin-right: 2px;
+    }
+    .menu {
+        margin-left: 0px;
+        display: none;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        background-color: #333;
+        z-index: 999;
+        text-align: center;
+        padding: 2rem 0;
+    }
+    .menu-list li {
+        margin: 0;
+    }
+    .menu-icon {
+        display: block;
+    }
+    #menu-toggle:not(:checked) + .menu {
+        display: none;
+    }
+    .communities {
+        width: 100%;
+        margin-top: 0.5rem;
+    }
+    .content {
+        padding: 0.5rem;
+    }
+    .premium-div {
+        width: 100%;
+        position: static;
+    }
+}

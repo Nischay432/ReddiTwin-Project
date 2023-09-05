@@ -1,0 +1,275 @@
+
+/* Global Styles */
+body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #1a282d;
+}
+
+/* Styles for the Reddit Login Section */
+.Reddit {
+    font-size: 0.9rem;
+    margin: 5px;
+    position: fixed;
+    padding: 20px 30px;
+    width: 350px;
+    height: 500px;
+    background-color: white;
+    box-shadow: 5px 8px 10px;
+    border-radius: 10px;
+}
+
+/* Styles for the Switch Element */
+.switch {
+    margin: 5px;
+    text-align: center;
+    padding: 10px 92px;
+    border-radius: 25px;
+    border: 1px slategrey solid;
+    font-size: medium;
+}
+
+/* Styles for the nano-sized headings */
+h1.nano {
+    color: black;
+    font-size: 1.5rem;
+}
+
+/* Styles for the nano-sized text */
+.nano {
+    color: black;
+    font-size: 0.8rem;
+}
+
+/* Styles for the 'tat' class */
+.tat {
+    font-size: 0.8rem;
+}
+
+/* Styles for the 'wall' class */
+.wall {
+    text-decoration: none;
+}
+
+/* Styles for the Google Login Button */
+.google {
+    display: flex;
+    direction: column;
+    text-align: center;
+    padding: 10px 16px;
+    border-radius: 25px;
+    height: 20px;
+    margin: 5px;
+    border: 1px slategrey solid;
+    font-size: medium;
+    font-family: sans-serif;
+    margin-bottom: 7px;
+    align-items: center;
+    background-color: whitesmoke;
+}
+
+/* Styles for the text inside the Google Login Button */
+.google p {
+    margin-left: 40px;
+    text-decoration: none;
+    color: black;
+}
+
+/* Styles for the Apple Login Button */
+#red {
+    margin-left: 46px;
+    text-decoration: none;
+    color: black;
+}
+
+/* Styles for links inside a div */
+div a {
+    text-decoration: none;
+}
+
+/* Styles for the Google and Apple images */
+.google-apple img {
+    height: 40px;
+    width: 40px;
+}
+
+/* Styles for specific Apple image */
+#red1 {
+    height: 28px;
+    width: 28px;
+    padding: 0px 7px;
+}
+
+/* Styles for all h1 elements */
+h1 {
+    font-weight: 100;
+}
+
+/* Styles for the 'wall' class with specific color */
+.wall {
+    color: rgb(218, 30, 30);
+}
+
+/* Styles for the h3 elements */
+h3 {
+    margin: 5px 144px;
+    font-weight: 100;
+    font-size: medium;
+}
+
+/* Styles for the input elements with class 'user' */
+input.user {
+    border: none;
+    outline: none;
+    padding: 15px 10px;
+    padding-top: 5px;
+    padding-left: 15px;
+    border-radius: 25px;
+    margin: 5px;
+    width: 90%;
+}
+
+/* Styles for the success message */
+#msg {
+    font-size: 13px;
+    width: 110px;
+    color: #F45000;
+    position: relative;
+    transform: translateX(120px) translateY(-10px);
+    z-index: 3;
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    display: none;
+}
+
+/* Styles for the input placeholders with class 'pl' */
+.pl::placeholder {
+    top: 12%;
+    position: absolute;
+    transition: 0.4s;
+    transition-duration: 1s;
+    transform: translateX(0px) translateY(-2px);
+    font-size: 0.8em;
+    color: black;
+}
+
+/* Styles for the heading with class 'heading' */
+.heading {
+    color: black;
+}
+
+/* Styles for the 'cable' button */
+#cable {
+    text-align: center;
+    padding: 10px 110px;
+    border-radius: 25px;
+    margin: 5px;
+    border: 1px rgb(7, 8, 8) solid;
+    font-size: medium;
+    background-color: rgb(218, 30, 30);
+    color: white;
+    font-family: sans-serif;
+    cursor: pointer;
+}
+
+/* Styles for the h5 elements */
+h5 {
+    margin-top: 20px;
+    margin-bottom: 50px;
+    font-weight: 100;
+}
+
+/* Styles for the 'pro' class */
+.pro {
+    margin-top: 10px;
+    color: white;
+}
+
+
+
+
+/* Responsive styles using media queries */
+@media (max-width: 768px) {
+    /* Adjust Reddit section width for smaller screens */
+    .Reddit {
+        width: 80%;
+        max-width: 100%;
+    }
+
+    /* Adjust padding and font size for smaller screens */
+    .switch,
+    .google,
+    #cable {
+        padding: 10px 20px;
+    }
+
+    /* Adjust margin for h3 elements */
+    h3 {
+        margin: 5px 20px;
+    }
+
+    /* Adjust padding for input elements */
+    input.user {
+        padding: 10px;
+    }
+
+    /* Adjust success message position */
+    #msg {
+        transform: translateX(0) translateY(-10px);
+    }
+
+    /* Adjust placeholder position and font size */
+    .pl::placeholder {
+        top: 10%;
+        font-size: 0.7em;
+    }
+
+    /* Adjust margin for h5 elements */
+    h5 {
+        margin-top: 10px;
+        margin-bottom: 30px;
+    }
+}
+
+/* Additional media query for specific screen dimensions */
+@media (max-width: 480px) and (max-height: 500px) {
+    /* Adjust Reddit section width for smaller screens */
+    .Reddit {
+        width: 90%;
+        max-width: none;
+    }
+
+    /* Adjust padding, font size, and color for smaller screens */
+    .switch,
+    .google,
+    #cable {
+        padding: 10px 20px;
+        font-size: small;
+    }
+
+    /* Adjust margin and font size for h3 elements */
+    h3 {
+        margin: 5px 10px;
+        font-size: small;
+    }
+
+    /* Adjust padding for input elements */
+    input.user {
+        padding: 8px;
+    }
+
+    /* Adjust success message position */
+    #msg {
+        transform: translateX(0) translateY(-10px);
+    }
+
+    /* Adjust placeholder position and font size */
+    .pl::placeholder {
+        top: 10%;
+        font-size: 0.6em;
+    }

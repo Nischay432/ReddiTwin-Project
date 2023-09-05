@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="apple-touch-icon" sizes="180x180" href="Favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="Favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="Favicon/favicon-16x16.png">
+    <link rel="manifest" href="Favicon/site.webmanifest">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
+    <title>ReddiTwin</title>
+</head>
+<body>
+    <header class="main-header">
+        <div class="logo" id="menu-toggle">
+            <img src="Resources/logo3.png" alt="Logo">
+            <h4 class="mainheading">ReddiTwin</h4>
+        </div>
+        <div class="search__container">
+            <input class="search__input" type="text" placeholder="Search">
+        </div>
+        <div class="user-section">
+            <button id="add-post-button">+</button>
+            <button id="Login-button" href="login/login.html"><a href="login/login.html">Login</a></button>
+        </div>
+    </header>
+    <div class="container">
+        <nav class="menu">
+            <ul class="menu-list">
+                <li><img src="Resources/home.png" alt="Home"> <a href="#">Home</a></li>
+                <li><img src="Resources/popular.png" alt="Popular"> <a href="#">Popular</a></li>
+                <li class="heading">TOPICS</li>
+                <li><img src="Resources/Controller.png" alt="Gaming"> <a href="#">Gaming</a></li>
+                <li><img src="Resources/sports.png" alt="Sports"> <a href="#">Sports</a></li>
+                <li><img src="Resources/graph.png" alt="Business"> <a href="#">Business</a></li>
+                <li><img src="Resources/crypto.png" alt="Crypto"> <a href="#">Crypto</a></li>
+                <li><img src="Resources/tv.png" alt="Television"> <a href="#">Television</a></li>
+                <li><img src="Resources/star.png" alt="Celebrity"> <a href="#">Celebrity</a></li>
+                <li class="heading">Resources</li>
+                <li><img src="Resources/reddit.png" alt="About Reddit"> <a href="About/about.html">About ReddiTwin</a></li>
+                <li><img src="Resources/market.png" alt="Advertise"> <a href="#">Advertise</a></li>
+                <li><img src="Resources/question.png" alt="Help"> <a href="#">Help</a></li>
+                <li><img src="Resources/blog.png" alt="Brand"> <a href="About/brand.html">Brand</a></li>
+                <li><img src="Resources/wrench.png" alt="Careers"> <a href="About/careers.html">Careers</a></li>
+                <li><img src="Resources/microphone.png" alt="Press"> <a href="About/press.html">Press</a></li>
+            </ul>
+            
+        </nav>
+        <main class="content">
+            <div class="reddit-post">
+                <div class="post-header">
+                    <div class="author-icon"><img src="Resources/Genshin-logo.jpg" alt="👤"><div class="post-author">Genshin_Impact</div></div> 
+                    <div class="post-time">1 hour ago</div>
+                </div>
+                <p class="post-description">
+                    Exploring the Enchanting World of Genshin Impact 🌍⚔️
+                </p>
+                <div class="post-image">
+                    <img src="Resources/genshin.jpg" alt="Genshin Impact Screenshot">
+                </div>
+                <div class="post-buttons">
+                    <button class="rounded-button">Vote</button>
+                    <button class="rounded-button">Comment</button>
+                    <button class="rounded-button">Share</button>
+                </div>
+            </div>
+
+            <div class="reddit-post">
+                <div class="post-header">
+                    <div class="author-icon"><img src="Resources/Genshin-logo.jpg" alt="👤"><div class="post-author">Genshin_Impact</div></div> 
+                    <div class="post-time">1 hour ago</div>
+                </div>
+                <p class="post-description">
+                    Exploring the Enchanting World of Genshin Impact 🌍⚔️
+                </p>
+                <div class="post-image">
+                    <img src="Resources/genshin.jpg" alt="Genshin Impact Screenshot">
+                </div>
+                <div class="post-buttons">
+                    <button class="rounded-button">Vote</button>
+                    <button class="rounded-button">Comment</button>
+                    <button class="rounded-button">Share</button>
+                </div>
+            </div>
+
+            <div class="reddit-post">
+                <div class="post-header">
+                    <div class="author-icon"><img src="Resources/Genshin-logo.jpg" alt="👤"><div class="post-author">Genshin_Impact</div></div> 
+                    <div class="post-time">1 hour ago</div>
+                </div>
+                <p class="post-description">
+                    Exploring the Enchanting World of Genshin Impact 🌍⚔️
+                </p>
+                <div class="post-image">
+                    <img src="Resources/genshin.jpg" alt="Genshin Impact Screenshot">
+                </div>
+                <div class="post-buttons">
+                    <button class="rounded-button">Vote</button>
+                    <button class="rounded-button">Comment</button>
+                    <button class="rounded-button">Share</button>
+                </div>
+            </div>
+            <div id="post-popup" class="popup">
+                <div class="popup-content">
+                    <span class="close-popup" id="close-popup">&times;</span>
+                    <h2>Create a New Blog Post</h2>
+                    <input type="text" id="post-heading" placeholder="Enter Heading">
+                    <input type="text" id="post-image-url" placeholder="Enter Image URL">
+                    <textarea id="post-content" placeholder="Enter Post Content"></textarea>
+                    <div class="pop-up_buttons">
+                        <button id="create-post-button">Create Post</button>
+                        <button id="cancel-post-button">Cancel</button>
+                    </div>
+                </div>
+            </div>
+              
+              <div id="blog-posts"></div>
+            
+            <!-- More posts... -->
+        </main>
+        <div class="right-side">
+            <div class="fix-right">
+                <div class="communities">
+                    <h2 class="communities-heading">POPULAR COMMUNITIES</h2>
+                    <a href="#" class="community">
+                        <img src="Resources/Askmen.webp" alt="Community Icon">
+                        <div class="community-info">
+                            <h3>r/AskMen</h3>
+                            <p>5,579,504 members</p>
+                        </div>
+                    </a>
+                    <a href="#" class="community">
+                        <img src="Resources/Playstation.png" alt="Community Icon">
+                        <div class="community-info">
+                            <h3>r/PS4</h3>
+                            <p>5,591,798 members</p>
+                        </div>
+                    </a>
+                    <a href="#" class="community">
+                        <img src="Resources/apple.jpg" alt="Community Icon">
+                        <div class="community-info">
+                            <h3>r/apple</h3>
+                            <p>4,273,066 members</p>
+                        </div>
+                    </a>
+                    <a href="#" class="community">
+                        <img src="Resources/2K.png" alt="Community Icon">
+                        <div class="community-info">
+                            <h3>r/NBA2k</h3>
+                            <p>507,728 members</p>
+                        </div>
+                    </a>
+                    <a href="#" class="community">
+                        <img src="Resources/Xbox.png" alt="Community Icon">
+                        <div class="community-info">
+                            <h3>r/xboxone</h3>
+                            <p>4,006,350 members</p>
+                        </div>
+                    </a>     
+                </div>
+                <div class="premium-div">
+                    <img src="Resources/premium.jpg" alt="Premium">
+                    <div class="premium-head">
+                        <h3>ReddiTwin Premium</h3>
+                        <p>Enjoy the new Experience</p>
+                    </div>
+                    <button class="premium-button"><a href="premium page/premium_page.html">Try Now</a></button>
+                </div>
+            </div>
+            <div class="fake">
+            
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
